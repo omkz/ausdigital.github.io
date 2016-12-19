@@ -185,7 +185,6 @@ small screens.
     padding: 5rem 6rem;
 }
 
-
 #detail-page-header {
     color: #fff;
     text-align: center;
@@ -218,7 +217,6 @@ small screens.
     left: 200px;
     width: 200px;
     position: fixed;
-
 }
 
 #layout.active .menu-link {
