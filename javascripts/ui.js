@@ -3,6 +3,7 @@
     var layout   = document.getElementById('layout'),
         menu     = document.getElementById('menu'),
         menuLink = document.getElementById('menuLink'),
+        pageHeader = document.getElementById('page-header'),
         content  = document.getElementById('main');
 
     function toggleClass(element, className) {
@@ -26,11 +27,12 @@
 
     function toggleAll(e) {
         var active = 'active';
-
+        
         e.preventDefault();
         toggleClass(layout, active);
         toggleClass(menu, active);
         toggleClass(menuLink, active);
+        toggleClass(pageHeader, active);
     }
 
     menuLink.onclick = function (e) {
