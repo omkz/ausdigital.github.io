@@ -37,11 +37,13 @@ The content `<div>` is where all your content goes.
     padding: 2.5em 2em 0;
     border-bottom: 1px solid #eee;
 }
+
 .header h1 {
     margin: 0.2em 0;
     font-size: 3em;
     font-weight: 300;
 }
+
 .header h2 {
     font-weight: 300;
     color: #ccc;
@@ -64,15 +66,11 @@ appears on the left side of the page.
 All anchors inside the menu should be styled like this.
 */
 
-a.active {
-    color: #FFE000;
+#menu li.active a {
+    background-color: #555;
+    color: #fff;
+    /*text-decoration: none;*/
 }
-
-#menu li.active a{
- background-color: #555;
- color: #fff;
- /*text-decoration: none;*/
- }
 
 #menu a {
     color: #111;
@@ -146,11 +144,11 @@ small screens.
 
 .menu-link {
     position: fixed;
-    display: block;  /* show this onabsolutely on small screens */
+    display: block; /* show this onabsolutely on small screens */
     top: 0;
     left: 0;
     background-color: #888888;
-    font-size: 10px;  /*change this value to increase/decrease button size */
+    font-size: 10px; /*change this value to increase/decrease button size */
     z-index: 10;
     width: 5em;
     height: auto;
@@ -184,29 +182,6 @@ small screens.
 
 .menu-link span:after {
     margin-top: 0.6em;
-}
-
-#page-header {
-    color: #fff;
-    text-align: center;
-    background-color: #159957;
-    background-image: linear-gradient(120deg, #155799, #159957);
-    margin-left: -200px;
-    padding: 5rem 6rem;
-}
-
-#detail-page-header {
-    color: #fff;
-    text-align: center;
-    background-color: #159957;
-    background-image: linear-gradient(120deg, #155799, #159957);
-    margin-left: -200px;
-    padding: 0.75rem 0.75rem;
-}
-
-#detail-page-header a {
-    color: inherit;
-    text-decoration: none;
 }
 
 #menu {
@@ -248,16 +223,12 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     }
 
     #layout {
-        padding-left: 200px;   /* left col width "#menu" */
+        padding-left: 200px; /* left col width "#menu" */
         left: 0;
     }
 
     .menu-link {
         display: none;
-    }
-
-    #page-header {
-        margin-left: -200px;
     }
 
     #layout.active #menu {
@@ -281,16 +252,64 @@ Hides the menu at `48em`, but modify this based on your app's needs.
         position: relative;
         left: 200px;
     }
+}
 
-    #page-header{
-        margin-left: 0;
-        left: 200px;
+#page-header {
+    color: #fff;
+    text-align: center;
+    background-color: #159957;
+    background-image: linear-gradient(120deg, #155799, #159957);
+}
+
+@media screen and (min-width: 64em) {
+    #page-header {
+        padding: 5rem 6rem;
+        margin-left: -200px;
+    }
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+    #page-header {
+        padding: 3rem 4rem;
+        margin-left: -200px;
+    }
+}
+
+@media screen and (max-width: 42em) {
+    #page-header {
         padding: 2rem 1rem;
     }
+}
 
-    #detail-page-header{
-        margin-left: 0;
-        left: 200px;
+#detail-page-header {
+    color: #fff;
+    text-align: center;
+    background-color: #159957;
+    background-image: linear-gradient(120deg, #155799, #159957);
+    /*margin-left: -200px;*/
+    padding: 0.75rem 0.75rem;
+}
+
+#detail-page-header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 64em) {
+    #detail-page-header {
+        margin-left: -200px;
+    }
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+    #detail-page-header {
+        margin-left: -200px;
+    }
+}
+
+@media screen and (max-width: 42em) {
+    #detail-page-header {
         padding: 0.75rem 0.75rem;
     }
 }
+
