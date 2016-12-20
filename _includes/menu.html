@@ -6,16 +6,29 @@
 <div id="menu">
     <div class="pure-menu">
         <ul class="pure-menu-list">
-            <p>Technical</p>
-            <li class="pure-menu-item"><a href="/digital-capability-locator" class="pure-menu-link">Digital Capability Locator</a></li>
-            <li class="pure-menu-item"><a href="/identity-provider" class="pure-menu-link">Identity Provider</a></li>
-            <li class="pure-menu-item"><a href="/notary" class="pure-menu-link">Notary</a></li>
-            <li class="pure-menu-item"><a href="/service-metadata-publisher" class="pure-menu-link">Service Metadata Publisher</a></li>
-            <li class="pure-menu-item"><a href="/transaction-access-point" class="pure-menu-link">Transaction Access Point</a></li>
-            <p>Semantics</p>
-            <li class="pure-menu-item"><a href="/billing-semantics" class="pure-menu-link">Billing</a></li>
-            <li class="pure-menu-item"><a href="/purchase-order-semantics" class="pure-menu-link">Purchase Orders</a></li>
-            <li class="pure-menu-item"><a href="/fulfillment-semantics" class="pure-menu-link">Fulfillment</a></li>
+
+            {% assign url_parts = page.url | split: '/' %}
+
+            <p>Technical<p>
+            <li class="pure-menu-item{% if url_parts[1] == 'digital-capability-locator' %} active{% endif %}"><a href="/digital-capability-locator/" class="pure-menu-link">Digital Capability Locator</a></li>
+            <li class="pure-menu-item{% if url_parts[1] == 'identity-provider' %} active{% endif %}"><a
+                    href="/identity-provider/" class="pure-menu-link">Identity Provider</a></li>
+            <li class="pure-menu-item{% if url_parts[1] == 'notary' %} active{% endif %}"><a href="/notary/"
+                                                                                           class="pure-menu-link">Notary</a>
+            </li>
+            <li class="pure-menu-item{% if url_parts[1] == 'service-metadata-publisher' %} active{% endif %}"><a
+                    href="/service-metadata-publisher/" class="pure-menu-link">Service Metadata Publisher</a></li>
+            <li class="pure-menu-item{% if url_parts[1] == 'transaction-access-point' %} active{% endif %}"><a
+                    href="/transaction-access-point/" class="pure-menu-link">Transaction Access Point</a></li>
+
+            <p>Semantics<p>
+            <li class="pure-menu-item{% if url_parts[1] == 'billing-semantics' %} active{% endif %}"><a
+                    href="/billing-semantics/" class="pure-menu-link">Billing</a></li>
+            <li class="pure-menu-item{% if url_parts[1] == 'purchase-order-semantics' %} active{% endif %}"><a
+                    href="/purchase-order-semantics/" class="pure-menu-link">Purchase Orders</a></li>
+            <li class="pure-menu-item{% if url_parts[1] == 'fulfillment-semantics' %} active{% endif %}"><a
+                    href="/fulfillment-semantics/" class="pure-menu-link">Fulfillment</a></li>
+
         </ul>
     </div>
 </div>

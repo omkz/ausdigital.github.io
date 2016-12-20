@@ -63,19 +63,29 @@ appears on the left side of the page.
 /*
 All anchors inside the menu should be styled like this.
 */
+
+a.active {
+    color: #FFE000;
+}
+
+#menu li.active a{
+ background-color: #555;
+ color: #fff;
+ /*text-decoration: none;*/
+ }
+
 #menu a {
     color: #111;
     border: none;
-    padding: 0.6em 0 0.6em 0.6em;
+    padding: 0.6em 0 0.6em 1em;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    padding-left: 1.5rem;
+    /*padding-left: 1rem;*/
 }
 
 #menu p {
     color: black;
     border: none;
-    padding: 0.6em 0 0.6em 0.6em;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: bold;
